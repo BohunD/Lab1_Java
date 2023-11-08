@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Main {
     public static double calculateS(char a, char n, char b, char m) {
-        char operation1 = '+';
-        char operation2 = '%';
+        // operation1 = '+';
+        // operation2 = '%';
         int constant = 2;
         double result = 0.0;
 
@@ -16,8 +16,8 @@ public class Main {
 
             for (char i = a; i <= n; i++) {
                 for (char j = b; j <= m; j++) {
-                    double numerator = (double) (i * operation2 * j);
-                    double denominator = (double) (i * operation1 * constant);
+                    double numerator = (double) (i % j);
+                    double denominator = (double) (i + constant);
                     result += numerator / denominator;
                 }
             }
